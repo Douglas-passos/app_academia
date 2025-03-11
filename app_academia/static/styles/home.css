@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+ul#menu {
+   text-indent: 40px;
+}
+
+ul#menu :hover {
+    color: red;
+}
