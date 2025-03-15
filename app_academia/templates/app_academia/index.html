@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,12 +15,12 @@
             <hgroup>
                 <img id="logo" src="static/img/iron.png" alt="Olimpo Academias">
                 <h1>Iron Gym - Academias</h1>
+                <h2>Sejam bem vindos(a)</h2>
             </hgroup>
     </header>
+    
     <form method="post" id="formulario" action="mailto:douglaspassos_contato@hotmail.com">
-        
-    <h2>Sejam bem vindos(a)</h2>
-    <fieldset id="usuario">
+        <fieldset id="usuario">
         <legend id="email">Entre com seu endereço de e-mail</legend>
         <label for="cMail"><input class="form-control" type="email" name="tMail" id="cMail" size="30" maxlength="50" required="required" placeholder="E-mail"></label>
         <label for="cSenha"><input class="form-control" type="password" name="tSenha" id="cSenha" size="30" maxlength="50" required="required" placeholder="Senha"></label>
@@ -28,8 +29,10 @@
         <label for="cLembrar">Lembrar-me</label></p>
         <label><a href="#">Esqueceu a senha?</a></label>
         </div>
-        <button type="button" class="btn btn-dark">Acessar conta</button>
+        <a href="/home"><button type="button" class="btn btn-dark">Acessar Conta</button></a>
+        
     </fieldset>
+
        <fieldset id="cadastrar">
         <p><label for="cadastrar">Não tem uma conta?</label></p>
         <a href="/cadastrar">

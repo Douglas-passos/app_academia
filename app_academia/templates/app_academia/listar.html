@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Gym - Academias</title>
+</head>
+<body>
+    <div id="principal">
+        <header id="cabecalho">
+            <hgroup>
+                <img id="logo" src="static/img/iron.png" alt="Iron Gym - Academias">
+                <h1>Iron Gym - Academias</h1>
+            </hgroup>
+        </header>
+        <form method="get" id="formulario" action="/listar">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{ usuario.nome }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>{{ usuario.senha }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </form>
+
+    
+</body>
+</html>

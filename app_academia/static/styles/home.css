@@ -1,9 +1,19 @@
 @charset "UTF-8";
 
 ul#menu {
-   text-indent: 40px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 600px;
+    height: 50px;
+}
+ul#menu li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-ul#menu :hover {
-    color: red;
+ul#exercicios {
+    list-style-type: decimal;
 }
+
