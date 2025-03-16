@@ -1,0 +1,44 @@
+{% extends "app_academia/home.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <title>Treinos - Iron Gym</title>
+</head>
+<body>
+
+{% block content %}
+    <div id="tabelas" class="container mt-3">
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Aula</th>
+                <th scope="col">Data</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ritmos</td>
+                <td>Segundas-Feiras</td>
+              </tr>
+              <tr>
+                <td>Jiu-Jitsu</td>
+                <td>Terças-Feiras/Quintas-Feiras</td>                
+              </tr>
+              <tr>
+                <td>Muay Thai</td>
+                <td>Quartas-Feiras/Sextas-Feiras</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    {% endblock %}
+    </body>
+</html>

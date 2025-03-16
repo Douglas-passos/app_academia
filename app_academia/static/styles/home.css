@@ -15,5 +15,20 @@ ul#menu li {
 
 ul#exercicios {
     list-style-type: decimal;
+    list-style-position: inside;
 }
+
+div#texto_inicio { 
+    border: black solid 1px;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: black;
+    color: white;
+}
+
+div#tabelas {
+    padding: 50px;
+    
+}
+
 

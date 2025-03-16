@@ -22,13 +22,13 @@
               <a class="nav-link" href="/treinos">Treinos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Planos</a>       
+              <a class="nav-link" href="/planos">Planos</a>       
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Avaliações</a>
+              <a class="nav-link" href="/avaliacoes">Avaliações</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Aulas</a>
+              <a class="nav-link" href="/aulas">Aulas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/">Ajuda</a>
@@ -46,8 +46,13 @@
             </hgroup>
           </header>
         </div>
+        
         {% block content %}
+        <div id="tabelas">
+        <div id='texto_inicio'>
         {% lorem 1 b random %}
+        </div>
+        </div>
         {% endblock %}
     </div>
       

@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password
 from .models import Cadastrar
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 
 def index(request):
     return render(request, 'app_academia/index.html')
@@ -10,6 +12,15 @@ def home(request):
 
 def treinos(request):
     return render(request, 'app_academia/treinos.html')
+
+def planos(request):
+    return render(request, 'app_academia/planos.html')
+
+def avaliacoes(request):
+    return render(request, 'app_academia/avaliacoes.html')
+
+def aulas(request):
+    return render(request, 'app_academia/aulas.html')
 
 
 def cadastrar(request):
@@ -49,8 +60,19 @@ def excluir(request, id):
     usuario.delete()
     return redirect('listar')
 
-def loguin(request):
-    return render(request, 'app_academia/home.html')
+def login_view(request):
+    if request.method == 'POST':
+        email = request.POST['tMail']
+        senha = request.POST['tSenha']
+        print(f"Email: {email}, Senha: {senha}")
+        user = authenticate(request, username=email, password=senha)
+        
+        if user is not None:
+            login(request, user)
+            return redirect('home')  
+        else:
+            messages.error(request, 'Credenciais inválidas. Tente novamente.')
+    return render(request, 'index') 
 
 
     
